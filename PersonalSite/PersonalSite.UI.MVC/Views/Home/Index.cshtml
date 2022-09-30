@@ -1,8 +1,151 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+@*Header*@
+<header class="bg-dark py-5">
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center justify-content-center">
+            <div class="col-lg-8 col-xl-7 col-xxl-6">
+                <div class="my-5 text-center text-xl-start">
+                    <h1 class="display-5 fw-bolder text-white mb-2 ">Welcome to my website!</h1>
+                    <h3 class=" fw-bolder text-white mb-2 ">Sean Coyan</h3>
+                    <p class="lead fw-normal text-white-50 mb-4">Full Stack Software Developer </p>
+                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                        <a class="btn btn-primary btn-sm px-4 me-sm-3" style="font-size: 2em;" href="@Url.Action("Resume", "Home")">Portfolio</a>
+                        @*<a class="btn btn-primary btn-lg px-4 me-sm-3" href="@Url.Action("Contact", "Home")">Contact Me!</a>  *@
+                        @*<i class="bi bi-linkedin" style="font-size: 2em"></i>*@
+                        <a class="btn btn-primary btn-sm px-4 me-sm-3" href="https://www.linkedin.com/in/seancoyan/" target="_blank"><i class="bi bi-linkedin" style="font-size: 2em"></i></a>
+                        <a class="btn btn-primary btn-sm px-4" href="https://github.com/SeanCodes2" target="_blank"><i class="bi bi-github" style="font-size: 2em"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-4 my-5" src="/assets/images/seancoyan1_websize.jpg" alt="Picture of Sean Coyan" /></div>
+        </div>
+    </div>
+</header>
+@*<!-- Working With Section-->*@
+<section class="py-5" id="features">
+    <div class="container px-5 my-5">
+        <div class="col-lg-12 mb-5 mb-lg-0 text-center"><h2 class="fw-bolder mb-5">Working With:</h2></div>
+        <div class="row gx-5">
+            <div class=" container">
+                <div class="row gx-5 row-cols-1 row-cols-md-2 justify-content-center">                    
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+                    <div class="col mb-5 h-100">
+                        <div class="text-center mb-3"><img src="/assets/images/HTML5.png" alt=""></div>
+                        <h2 class="h4 fw-bolder">HTML5</h2>
+                        <p class="mb-0">A markup language used for structuring and presenting content on the World Wide Web.</p>
+                    </div>
+                    <div class="col mb-5 h-100">
+                        <div class="text-center mb-3 mb-3"><img src="/assets/images/css3.png" alt=""></div>
+                        <h2 class="h5">CSS</h2>
+                        <p class="mb-0">A stylesheet language used to describe the presentation of a document written in HTML or XML</p>
+                    </div>
+                    <div class="col mb-5 h-100">
+                        <div class="text-center mb-3 mb-3"><img src="/assets/images/javascript.png" alt=""></div>
+                        <h2 class="h5">Javascript</h2>
+                        <p class="mb-0">A dynamic programming language that's used for web development, in web applications, for game development, and lots more.</p>
+                    </div>
+                    <div class="col mb-5 h-100">
+                        <div class="text-center mb-3 mb-3"><img src="/assets/images/cshrp.jpg" alt=""> </div>
+                        <h2 class="h5">C#</h2>
+                        <p class="mb-0">An object-oriented programming language from Microsoft that aims to combine the computing power of C++ with the programming ease of Visual Basic.</p>
+                    </div>
+                    <div class="col mb-5 h-100">
+                        <div class="text-center mb-3 mb-3"><img src="/assets/images/sqlicon.png" alt=""></div>
+                        <h2 class="h5">SQL</h2>
+                        <p class="mb-0">Structured Query Language (SQL) is a standardized programming language that is used to manage relational databases and perform various operations on the data in them.</p>
+                    </div>
+                    <div class="col mb-5 h-100">
+                        <div class="text-center mb-3 mb-3"><img src="/assets/images/react.png" alt=""></div>
+                        <h2 class="h5">React</h2>
+                        <p class="mb-0">A declarative, efficient, and flexible JavaScript library for building user interfaces. It lets you compose complex UIs from small and isolated pieces of code called “components”.</p>
+                    </div>
+                    <div class="col mb-5 h-100">
+                        <div class=text-center mb-3 mb-3"><img src="/assets/images/jquery.png" alt=""></div>
+                        <h2 class="h5">jQuery</h2>
+                        <p class="mb-0">A JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax.</p>
+                    </div>
+                    <div class="col mb-5 h-100">
+                        <div class="text-center mb-3 mb-3"><img src="/assets/images/Bootstrap5.png" alt=""></div>
+                        <h2 class="h5">Bootstrap</h2>
+                        <p class="mb-0">A free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains HTML, CSS and JavaScript</p>
+                    </div>
+                    
+@*                    <div class="col-auto mb-5 h-100 text-center">
+                        <img class="text-center mb-3" src="/assets/images/HTML5.png" data-bs-toggle="collapse" href="#collapseHtml5" role="button" aria-expanded="false" aria-controls="collapseExample" />
+                        <div class="collapse " id="collapseHtml5">
+                            <div class="card card-body bg-transparent">
+                                A markup language used for structuring and presenting content on the World Wide Web.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-auto mb-5 h-100 text-center">
+                        <img class="text-center mb-3" src="/assets/images/css3.png" data-bs-toggle="collapse" href="#collapseCSS" role="button" aria-expanded="false" aria-controls="collapseExample" />
+                        <div class="collapse " id="collapseCSS">
+                            <div class="card card-body bg-transparent">
+                                A stylesheet language used to describe the presentation of a document written in HTML or XML
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-auto mb-5 h-100 text-center">
+                        <img class="text-center mb-3" src="/assets/images/javascript.png" data-bs-toggle="collapse" href="#collapseJS" role="button" aria-expanded="false" aria-controls="collapseExample" />
+                        <div class="collapse " id="collapseJS">
+                            <div class="card card-body bg-transparent">
+                                A dynamic programming language that's used for web development, in web applications, for game development, and lots more.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-auto mb-5 h-100 text-center">
+                        <img class="text-center mb-3" src="/assets/images/cshrp.jpg" data-bs-toggle="collapse" href="#collapseCS" role="button" aria-expanded="false" aria-controls="collapseExample" />
+                        <div class="collapse " id="collapseCS">
+                            <div class="card card-body bg-transparent">
+                                An object-oriented programming language from Microsoft that aims to combine the computing power of C++ with the programming ease of Visual Basic
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-auto mb-5 h-100 text-center">
+                        <img class="text-center mb-3" src="/assets/images/sqlicon.png" data-bs-toggle="collapse" href="#collapseSQL" role="button" aria-expanded="false" aria-controls="collapseExample" />
+                        <div class="collapse " id="collapseSQL">
+                            <div class="card card-body bg-transparent">
+                                An object-oriented programming language from Microsoft that aims to combine the computing power of C++ with the programming ease of Visual Basic
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-auto mb-5 h-100 text-center">
+                        <img class="text-center mb-3" src="/assets/images/react.png" data-bs-toggle="collapse" href="#collapseReact" role="button" aria-expanded="false" aria-controls="collapseExample" />
+                        <div class="collapse " id="collapseReact">
+                            <div class="card card-body bg-transparent">
+                                An object-oriented programming language from Microsoft that aims to combine the computing power of C++ with the programming ease of Visual Basic
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-auto mb-5 h-100 text-center">
+                        <img class="text-center mb-3" src="/assets/images/jquery.png" data-bs-toggle="collapse" href="#collapseJQuery" role="button" aria-expanded="false" aria-controls="collapseExample" />
+                        <div class="collapse " id="collapseJQuery">
+                            <div class="card card-body bg-transparent">
+                                An object-oriented programming language from Microsoft that aims to combine the computing power of C++ with the programming ease of Visual Basic
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-auto mb-5 h-100 text-center">
+                        <img class="text-center mb-3" src="/assets/images/Bootstrap5.png" data-bs-toggle="collapse" href="#collapseBS" role="button" aria-expanded="false" aria-controls="collapseExample" />
+                        <div class="collapse " id="collapseBS">
+                            <div class="card card-body bg-transparent">
+                                An object-oriented programming language from Microsoft that aims to combine the computing power of C++ with the programming ease of Visual Basic
+                            </div>
+                        </div>
+                    </div>*@
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
