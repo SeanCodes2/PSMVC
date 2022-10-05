@@ -8,8 +8,12 @@
     <title>@ViewData["Title"] - SC Website</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <link rel="stylesheet" href="~/css/darkly.min.css" id="theme" class="dark">
-    <link rel="stylesheet" href="/css/custom.css">
+    <link rel="stylesheet" href="~/css/custom.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+
 </head>
 <body class="d-flex flex-column h-100">
     <main class="flex-shrink-0 bg">
@@ -47,25 +51,29 @@
                     </div>
                 </div>
             </div>
+            <a id="button"></a>
         </footer>
-        @*jQuery Script*@
-        <script src="/js/jquery-3.6.1.min.js "></script>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="/wwwroot/js/scripts.js"></script>        
 
-        @* script to set active navbar item*@
-@*        <script>
-            //For each <li> in the <nav class="menu">, apply the following function
-            $('.menu li').each(function () {
-                //If the <a> tag inside a <li> is linked to the current URL
-                if ($(this).find('a').attr('href') == window.location.pathname) {
-                    //Add the "active" class to the <a> tag
-                    $(this).addClass('active');
+
+        <script src="~/js/jquery-3.6.1.min.js "></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/scripts.js"></script>
+
+        <script>
+            var btn = $('#button');
+            $(window).scroll(function () {
+                if ($(window).scrollTop() > 300) {
+                    btn.addClass('show');
+                } else {
+                    btn.removeClass('show');
                 }
             });
-        </script>*@
+
+            btn.on('click', function (e) {
+                e.preventDefault();
+                $('html, body').animate({ scrollTop: 0 }, '300');
+            });
+        </script>
     </main>
 
     @RenderSection("scripts", required: false)

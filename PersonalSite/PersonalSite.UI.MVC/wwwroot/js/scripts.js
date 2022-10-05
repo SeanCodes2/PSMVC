@@ -8,9 +8,4 @@
 
 
 
-$(function(){
-    $(".ss-menu").ssMenu({
-        
-    });
 
-  });
