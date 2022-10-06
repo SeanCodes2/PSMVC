@@ -39,6 +39,13 @@
                     </form>
                 </div>
             </div>
+        </div><div class="bg-light rounded-3 py-5 px-4 px-md-5 mb-5">
+            <div class="text-center mb-5">
+                <h2 class="fw-bolder text-dark">Chuck Norris Quote</h2>
+                <br />
+                <div class="row justify-content-center text-dark" id="factsResults"></div>
+            </div>
+
         </div>
     </div>
 </section>
@@ -47,5 +54,20 @@
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
+
+
     }
+    <script>        
+            $.ajax({
+                url: 'https://api.chucknorris.io/jokes/random?category=dev',
+                method: 'GET',
+                success: function (data) {
+                    console.table(data.results);
+                    var facts = data.results;
+                    var factsResults = document.getElementById('factsResults');   
+                    factsResults.innerHTML +=
+                        `<h4>\"${data.value}\"</h4>`                    
+                }            
+        })
+    </script>
     }
