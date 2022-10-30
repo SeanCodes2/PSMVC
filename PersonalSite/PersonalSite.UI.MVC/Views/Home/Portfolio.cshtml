@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Portfolio";
 }
 
@@ -7,13 +6,20 @@
 <section class="py-5">
     <div class="container px-5 my-5">
         <div class="text-center mb-5">
-            <h1 class="fw-bolder">My Projects (coming soon)</h1>
+            <h1 class="fw-bolder">My Personal Projects</h1>
             <p class="lead fw-normal text-muted mb-0"></p>
         </div>
         <div class="row gx-5">
             <div class="col-lg-6">
                 <div class="position-relative mb-5">
-                    <img class="img-fluid rounded-3 mb-3" src="/assets/images/medievalScreenshot.png" alt="..." href="https://github.com/SeanCodes2/MedievalAdventure"  />
+                    <img class="img-fluid rounded-3 mb-3" src="/assets/images/medievalScreenshot.png" alt="..." href="https://github.com/SeanCodes2/MedievalAdventure" />
+                    @*  <div class="medCar">
+                    <div><img src="~/assets/images/AdClassSelect.png" /></div>
+                    <img src="~/assets/images/AdInn.png" />
+                    <img src="~/assets/images/AdSewer.png" />
+                    <img src="~/assets/images/AdStart.png" />
+                    <img src="~/assets/images/AdStore.png" />
+                    </div>*@
                     <a class="h3 fw-bolder text-decoration-none link-light stretched-link" href="https://github.com/SeanCodes2/MedievalAdventure" target="_blank">
                         Dungeon App
                         <p class="h5">I went with a medieval themed dungeon crawler app. Utilizing C# custom classes and methods I was able to produce a simulated town that users could travel from place to place in. The various "rooms" held different foes to try to conquer and earn gold from allowing the player to upgrade their character and move to harder encounters until finally beating the Orc Lord to win the game.</p>
@@ -23,32 +29,32 @@
             </div>
             <div class="col-lg-6">
                 <div class="position-relative mb-5">
-                    <img class="img-fluid rounded-3 mb-3" src="https://dummyimage.com/600x400/343a40/6c757d" alt="..." />
-                    <a class="h3 fw-bolder text-decoration-none link-light stretched-link" href="#!">
+                    <img class="img-fluid rounded-3 mb-3" src="/assets/images/StoreFront2.png " alt="..." />
+                    <a class="h3 fw-bolder text-decoration-none link-light stretched-link" href="https://github.com/SeanCodes2/StoreFront" target="_blank">
                         Storefront
-                        <p class="h5">Description of project and what I learned from it.</p>
+                        <p class="h5">This was our most extensive project. It included designing and implementing a full relational database on our SQL server, connecting it to our 2 tier .NET Core MVC App, scaffolding out all of our models and controllers, and converting over an E Commerce template. Very challenging, but very rewarding. </p>
                     </a>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="position-relative mb-5 mb-lg-0">
-                    <img class="img-fluid rounded-3 mb-3" src="https://dummyimage.com/600x400/343a40/6c757d" alt="..." />
-                    <a class="h3 fw-bolder text-decoration-none link-light stretched-link" href="#!">
+                    <img class="img-fluid rounded-3 mb-3" src="/assets/images/ToDoAPIpic.png" alt="..." />
+                    <a class="h3 fw-bolder text-decoration-none link-light stretched-link" href="https://github.com/SeanCodes2/ToDoAPI!" target="_blank">
                         ToDo API
-                        <p class="h5">Description of project and what I learned from it.</p>
+                        <p class="h5">In this project I utilized Sequal Server Management Software to design and implement a database, and then then utilized a .NET Core Web API with Entity Framework to scaffold out the controllers and views necessary to have full CRUD functionality to view and manipulate my data. I really enjoyed getting to continue to use .NET Core and the Entity Framework as well and getting to design and implement an API.  </p>
                     </a>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="position-relative mb-5">
-                    <img class="img-fluid rounded-3 mb-3" src="https://dummyimage.com/600x400/343a40/6c757d" alt="..." />
-                    <a class="h3 fw-bolder text-decoration-none link-light stretched-link" href="#!">
-                        React ToDo
-                        <p class="h5">Description of project and what I learned from it.</p>
+                    <img class="img-fluid rounded-3 mb-3" src="/assets/images/react_todo.png" alt="..." />
+                    <a class="h3 fw-bolder text-decoration-none link-light stretched-link" href="https://github.com/SeanCodes2/react_todo" target="_blank">
+                        React ToDo App
+                        <p class="h5">In this React ToDo App I used the React library to create a To Do application to track a list of things to do when going out mountain biking. I incorporated many other libraries to help style the app including react-bootstrap and react-icons. As well as axios for implementing full CRUD abilities linked to my ToDo API. Validation with Yup and Authentication and sign in abilites with Firebase. </p>
                     </a>
                 </div>
             </div>
-            <div class="col-lg-6">
+         @*   <div class="col-lg-6">
                 <div class="position-relative mb-5">
                     <img class="img-fluid rounded-3 mb-3" src="https://dummyimage.com/600x400/343a40/6c757d" alt="..." />
                     <a class="h3 fw-bolder text-decoration-none link-light stretched-link" href="#!">
@@ -65,7 +71,26 @@
                         <p class="h5">Description of project and what I learned from it.</p>
                     </a>
                 </div>
-            </div>
+            </div>*@
         </div>
     </div>
 </section>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+
+
+    }
+    <script>
+
+        $('.medCar').slick({
+            dots: true,
+            infinite: true,
+            speed: 500,
+            fade: true,
+            cssEase: 'linear'
+        });
+    </script>
+    }
